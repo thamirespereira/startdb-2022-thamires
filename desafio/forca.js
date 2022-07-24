@@ -2,28 +2,32 @@ class Forca {
 
   chutar(letra) { }
 
-  var palavraSecreta = ['a', 'b', 'a', 'c', 'a', 'x', 'i'];
   var letra = chute;
-  var acertos =[];
-  var erros =[];
-  var errosMax = 6;
   var vidas = 6;
-  var addAcertos = acertos.push();
-  var addErros = erros.push();
+ 
+  var acertos = {
+      length: 0,
 
-if (letra && ){
-		addAcertos;
-		console.log("parabéns, você acertou!");
-	} else{
-		addErros; 
-		vidas = vidas - 1; 
-		console.log("você errou.");
-	}
+      addAcertos: function addAcertos(letra) {
+          [].push.call(this, letra);
+    }
+};
 
-if (vidas > 0 && acertos === palavraSecreta) {
-	console.log ("ganhou");
+ var erros = {
+    length: 0,
+
+    addErros: function addErros(letra) {
+        [].push.call(this, letra);
+    }
+};
+
+
+if (erros){
+	vidas - 1;
+	console.log(vidas);
 } 
 	var letrasChutadas = acertos.concat(erros);
+	var palavras = acertos;
 }
   
   buscarEstado() { return ["perdeu", "ganhou", "aguardando chute"].includes(jogo.buscarDadosDoJogo); } // Possiveis valores: "perdeu", "aguardando chute" ou "ganhou"
